@@ -1,0 +1,36 @@
+# Legal colors for foreground and background color are:
+# white, black, red, blue, green, yellow, magenta, and cyan.
+# You may use the prefix "bright" to force a stronger color
+# highlight for the foreground.
+
+syntax "Etcsec_TeXT" "\.(etxt)$"
+
+# Comments
+color cyan "^#.*"
+
+# Headlines
+color brightwhite,blue "^#{4} .*"
+color brightblue "^#{2,3} .*"
+
+# Pick-Me Line
+color brightred " <{4} ?.*$"
+
+# nmap found ports
+color brightgreen "[0-9]{1,5}/[tcp|udp].*open.*"
+color brightcyan "[0-9]{1,5}/[tcp|udp].*filtered"
+color red "[0-9]{1,5}/[tcp|udp].*closed"
+
+# On The Box
+icolor brightwhite,brightred "on the box"
+
+# Shell Commands
+icolor yellow ".+*@.+*:.+*\$+.*|^\$.*"
+
+# Underline
+color brightyellow "( _[a-zA-Z0-9]{2,}_ )"
+
+# URLs
+color blue "https?://[^ )>]+"
+
+# Trailing Spaces
+color ,green "[[:space:]]+$"
