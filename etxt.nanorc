@@ -16,21 +16,21 @@ color brightblue "^#{2,3} .*"
 color brightred " <{4} ?.*$"
 
 # nmap found ports
-color brightgreen "[0-9]{1,5}/[tcp|udp].*open.*"
-color brightcyan "[0-9]{1,5}/[tcp|udp].*filtered"
-color red "[0-9]{1,5}/[tcp|udp].*closed"
+icolor brightgreen "[0-9]{1,5}/[tcp|udp].*open.*"
+icolor brightcyan "[0-9]{1,5}/[tcp|udp].*filtered"
+icolor red "[0-9]{1,5}/[tcp|udp].*closed"
 
 # On The Box
 icolor brightwhite,brightred "on the box"
 
 # Shell Commands
-icolor yellow ".+*@.+*:.+*\$+.*|^\$.*"
+color yellow ".+*@.+*:.+*\$+.*|^\$.*"
 
 # Underline
 color brightyellow "( _[a-zA-Z0-9]{2,}_ )"
 
 # URLs
-color blue "https?://[^ )>]+"
+icolor blue "https?://[^ )>]+"
 
 # Trailing Spaces
 color ,green "[[:space:]]+$"
